@@ -17,7 +17,7 @@
 	#include <vcl.h>
 #endif
 #include "tjsVariantString.h"
-
+#include <string>
 
 namespace TJS
 {

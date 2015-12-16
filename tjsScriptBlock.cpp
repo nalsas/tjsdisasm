@@ -41,6 +41,7 @@ tTJSScriptBlock::tTJSScriptBlock(tTJS * owner)
 
 	Owner->AddScriptBlock(this);
 }
+
 //---------------------------------------------------------------------------
 // for Bytecode
 tTJSScriptBlock::tTJSScriptBlock( tTJS* owner,  const tjs_char* name, tjs_int lineoffset ) {
@@ -199,6 +200,7 @@ ttstr tTJSScriptBlock::GetLineDescriptionString(tjs_int pos) const
 void tTJSScriptBlock::ConsoleOutput(const tjs_char *msg, void *data)
 {
 	tTJSScriptBlock *blk = (tTJSScriptBlock*)data;
+	//wprintf();
 	blk->Owner->OutputToConsole(msg);
 }
 //---------------------------------------------------------------------------
@@ -495,7 +497,7 @@ void tTJSScriptBlock::Dump() const
 	{
 		ConsoleOutput(TJS_W(""), (void*)this);
 		tjs_char ptr[256];
-		TJS_sprintf(ptr, TJS_W(" 0x%p"), (*i));
+		TJS_sprintf(ptr, TJS_W(" 0x%p\n"), (*i));
 		ConsoleOutput((ttstr(TJS_W("(")) + ttstr((*i)->GetContextTypeName()) +
 			TJS_W(") ") + ttstr((*i)->GetName()) + ptr).c_str(), (void*)this);
 		(*i)->Disassemble(ConsoleOutput, (void*)this);

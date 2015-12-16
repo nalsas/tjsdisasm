@@ -50,6 +50,7 @@ typedef std::basic_string<TJS::tjs_nchar> stdnstring;
 	#pragma intrinsic strcmp  // why these are needed?
 #endif
 
+#define TJS_TEXT_OUT_CRLF
 //---------------------------------------------------------------------------
 #endif
 

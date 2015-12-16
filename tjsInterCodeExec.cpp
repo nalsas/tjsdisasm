@@ -2831,7 +2831,7 @@ void tTJSInterCodeContext::ProcessStringFunction(const tjs_char *member,
 			return;
 		}
 
-		const destLength = s_len * count;
+		const int destLength = s_len * count;
 		tTJSString new_str = tTJSString(tTJSStringBufferLength(destLength));
 		tjs_char * dest = new_str.Independ();
 		while(count--)

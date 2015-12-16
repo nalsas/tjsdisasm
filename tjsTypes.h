@@ -96,9 +96,9 @@ typedef double tjs_real;
  #error "-DHAVE_CONFIG_H and config.h required."
 #endif
 */
-#include <sys/types.h>
+//#include <sys/types.h>
+#define _LCONV_DEFINED
 #include <stdint.h>
-
 
 #if defined(__linux__)
 	typedef int8_t tjs_int8;

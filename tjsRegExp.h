@@ -42,9 +42,10 @@ or uncomment in sgi.hpp
 
 #endif
 
+
 namespace TJS
 {
-typedef boost::reg_expression<tjs_char> tTJSRegEx;
+typedef boost::basic_regex<tjs_char> tTJSRegEx;
 //---------------------------------------------------------------------------
 // tTJSNI_RegExp
 //---------------------------------------------------------------------------
