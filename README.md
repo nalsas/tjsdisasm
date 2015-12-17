@@ -11,5 +11,10 @@ then you can get the executable file named tjsdisasm. For compiling, the boost_r
 
 不想自己编译的同学可以直接到release/bin下拿我编译好的windows版tjsdisasm.exe
 
+# usage
+tjsdisasm xxx.tjs  
+or  
+tjsdisasm xxx.tjs > xxx.src.tjsasm
+
 # license
-This software follow the same license of Kirikiri project
+This software follows the same license of Kirikiri project
